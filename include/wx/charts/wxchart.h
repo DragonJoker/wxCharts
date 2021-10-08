@@ -40,6 +40,7 @@ class WXCHARTS_EXPORT wxChart
 {
 public:
     wxChart();
+    virtual ~wxChart()noexcept = default;
 
     /// Gets the common options for the chart.
     /// @return The options.

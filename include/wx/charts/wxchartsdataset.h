@@ -37,14 +37,16 @@
 class WXCHARTS_EXPORT wxChartsDataset
 {
 public:
-    wxChartsDataset(const wxString& name);
+    wxChartsDataset(const wxString& name, const wxString& unit = wxEmptyString);
 
     const wxChartsDatasetId& GetId() const;
     const wxString& GetName() const;
+    const wxString& GetUnit() const;
 
 private:
     wxChartsDatasetId m_id;
     wxString m_name;
+    wxString m_unit;
 };
 
 #endif

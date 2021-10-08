@@ -60,16 +60,8 @@ void wxChart::Fit()
 
 void wxChart::DrawTooltips(wxGraphicsContext &gc)
 {
-    if (m_activeElements->size() == 1)
+    if (!m_activeElements->empty())
     {
-        // If only one element is active draw a normal tooltip
-        wxChartTooltip tooltip((*m_activeElements)[0]->GetTooltipPosition(),
-            (*m_activeElements)[0]->GetTooltipProvider()->GetTooltipText());
-        tooltip.Draw(gc);
-    }
-    else if (m_activeElements->size() > 1)
-    {
-        // If more than one element is active draw a multi-tooltip
         wxChartMultiTooltip multiTooltip((*m_activeElements)[0]->GetTooltipProvider()->GetTooltipTitle(),
             GetCommonOptions().GetMultiTooltipOptions());
         for (size_t j = 0; j < m_activeElements->size(); ++j)

@@ -25,8 +25,9 @@
 #include "wxchartsdoubledataset.h"
 
 wxChartsDoubleDataset::wxChartsDoubleDataset(const wxString& name,
-                                             const wxVector<wxDouble> &data)
-    : wxChartsDataset(name), m_data(data)
+                                             const wxVector<wxDouble> &data,
+                                             const wxString& unit)
+    : wxChartsDataset(name, unit), m_data(data)
 {
 }
 

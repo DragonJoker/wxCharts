@@ -196,7 +196,7 @@ void wxLineChart::Initialize(wxChartsCategoricalData::ptr &data)
         for (size_t j = 0; j < datasetData.size(); ++j)
         {
             std::stringstream tooltip;
-            tooltip << datasetData[j];
+            tooltip << datasetData[j] << datasets[i]->GetUnit();
             wxSharedPtr<wxChartTooltipProvider> tooltipProvider(
                 new wxChartTooltipProviderStatic(data->GetCategories()[j], tooltip.str(), datasetOptions->GetLineColor())
                 );

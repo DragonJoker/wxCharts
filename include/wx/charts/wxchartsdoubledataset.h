@@ -43,7 +43,8 @@ public:
 
     /// Constructs a wxBarChartDataset instance.
     /// @param data The list of values.
-    wxChartsDoubleDataset(const wxString& name, const wxVector<wxDouble> &data);
+    wxChartsDoubleDataset(const wxString& name, const wxVector<wxDouble> &data,
+        const wxString& unit = wxEmptyString);
 
     const wxVector<wxDouble>& GetData() const;
 

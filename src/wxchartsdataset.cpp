@@ -24,8 +24,8 @@
 
 #include "wxchartsdataset.h"
 
-wxChartsDataset::wxChartsDataset(const wxString& name)
-    : m_name(name)
+wxChartsDataset::wxChartsDataset(const wxString& name, const wxString& unit)
+    : m_name(name), m_unit(unit)
 {
 }
 
@@ -37,4 +37,9 @@ const wxChartsDatasetId& wxChartsDataset::GetId() const
 const wxString& wxChartsDataset::GetName() const
 {
     return m_name;
+}
+
+const wxString& wxChartsDataset::GetUnit() const
+{
+    return m_unit;
 }
